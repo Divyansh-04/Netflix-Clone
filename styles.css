@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Martel+Sans:wght@200;300;400;600;700;800;900&display=swap');
 
 *{
-    box-sizing: border-boxl;
+    box-sizing: border-box;
     padding: 0;
     margin: 0;
     
@@ -12,18 +12,24 @@
 }
 
 body{
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+::-webkit-scrollbar{
+    width: 0px;
+}
+
+.topBG{
+    background-image: url(assets/img/bg.png);
+    background-repeat: no-repeat;
+    background-size: 120rem;
 }
 
 .top{
-    position: relative;
-    background-image: url(assets/img/bg.png);
-    background-position: center top -18rem;
-    background-repeat: no-repeat;
-    background-size: 120rem;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));;
     width:100vw;
     height: 44rem;
-    z-index: -2;
 }
 
 main{
@@ -35,15 +41,7 @@ main{
     height: 75vh;
 }
 
-.blackBox{
-    position: absolute;
-    top:0;
-    height: 100%;
-    width: 100%;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));
-    opacity: 1;
-    z-index: -1;
-}
+
 
 nav{
     display: flex;
@@ -52,7 +50,7 @@ nav{
     height: 4rem;
     max-width: 77%;
     margin-inline: auto;
-    padding: 1rem 3rem;
+    padding: 3rem 0;
 }
 
 h1, h2{
@@ -72,39 +70,25 @@ h1, h2{
 
 .languageButton{
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
 
-    width: 7rem;
+    gap: 0.5rem;
 
-    padding-left:0.5rem;
-
+    width: 7.5rem;
+    padding-inline:0.5rem;
     margin-inline: 1.5rem;
     border: 1px solid rgba(255, 255, 255, 0.35);
     border-radius: 0.3rem;
-
-}
-
-.langSelectWrapper{
-    position: relative;
-    width: 5rem;
-}
-
-
-.langSelectWrapper::after{
-    content:"▼";
-    font-size: 0.5rem;
-    top: 7px;
-    right: 8px;
-    position: absolute;
+    background-color: rgba(0, 0, 0, 1);
 }
 
 .languageSelect{
     background-color: rgba(0, 0, 0, 1);
     appearance: none;
     border: rgba(0, 0, 0, 0);
-    font-size:1rem;
-    font-weight: 600;
+    font-size: 1rem;
+    font-weight:400;
 }
 
 
@@ -171,7 +155,7 @@ p{
     border:solid 1px rgba(255, 255, 255, 0.4);
     padding: 0.7rem 1rem;
     margin: 0.5rem;
-    height: 2rem;
+    height: 3.5rem;
 
     z-index: 7;
 }
@@ -206,7 +190,6 @@ section{
     min-width: 15rem;
     width:40%;
     overflow: hidden;
-    /* z-index: ; */
 }
 
 .tv img:first-child{

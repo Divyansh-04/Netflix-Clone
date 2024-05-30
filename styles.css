@@ -56,7 +56,7 @@ nav{
 h1, h2{
     font-weight: 900;
     font-size: 2.75rem;
-    margin: 1.5rem;
+    margin: 1.5rem 0rem;
 }
 
 
@@ -76,7 +76,7 @@ h1, h2{
     gap: 0.5rem;
 
     width: 7.5rem;
-    padding-inline:0.5rem;
+    padding:0.25rem 0.5rem;
     margin-inline: 1.5rem;
     border: 1px solid rgba(255, 255, 255, 0.35);
     border-radius: 0.3rem;
@@ -85,8 +85,14 @@ h1, h2{
 
 .languageSelect{
     background-color: rgba(0, 0, 0, 1);
+    background-image: url(assets/img/langop.svg) , url(assets/img/selectArrow.svg) ;
+    background-position: left, right;
+    background-repeat: no-repeat;
+
+    text-align: center;
     appearance: none;
     border: rgba(0, 0, 0, 0);
+    width: 7rem;
     font-size: 1rem;
     font-weight:400;
 }
@@ -102,6 +108,17 @@ h1, h2{
     padding-top: 3px;
     padding-inline: 1rem;
     height: 2rem;
+}
+
+header a{
+    text-decoration: none;
+}
+
+.getStarted:hover, .signIn:hover{
+    background-color: rgb(193, 17, 25);
+}
+.getStarted:active, .signIn:active{
+    background-color: rgb(153, 22, 19);
 }
 
 p{
@@ -160,6 +177,13 @@ p{
     z-index: 7;
 }
 
+.mail:focus{
+    outline: none;
+    border: solid 2px white ;
+    border-radius: 0.5rem;
+    
+}
+
 hr{
     height: 0.5rem;
     background-color: rgb(35, 35, 35);
@@ -192,7 +216,7 @@ section{
     overflow: hidden;
 }
 
-.tv img:first-child{
+.tv > img:first-child{
     min-width: 15rem;
     max-width: 100%;
     height: auto;
@@ -215,7 +239,36 @@ video{
     top:10%;
 }
 
+.loading{
+    position: relative;
+    bottom: 5%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: absolute;
+    background-color: black;
+    width: 55%;
+    min-width: 18rem;
+    height: 6rem;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 0.5rem;
 
+    z-index: 2;
+}
+
+.loading img{
+    width: 3.5rem;
+}
+
+.loading p{
+    font-size: 1rem;
+    padding-right: 3rem;
+}
+
+
+.downloading{
+    color: blue
+}
 
 footer{
     bottom:0;
@@ -249,5 +302,5 @@ footer .wrapper{
 }
 
 footer .languageButton{
-    margin: 0;
+    margin: 2rem 0;
 }

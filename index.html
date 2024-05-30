@@ -21,13 +21,17 @@
 
             <div class="rightHeadContainer">
               <button class="languageButton">
-                <img src="assets/img/langop.svg" />
-                  <select name="languageSelect" class="languageSelect">
-                    <option lang="en">English ▼</option>
-                    <option lang="hi">हिन्दी ▼</option>
-                  </select>
+                <select name="languageSelect" class="languageSelect">
+                  <option lang="en">English</option>
+                  <option lang="hi">हिन्दी</option>
+                </select>
               </button>
-              <button class="signIn">Sign In</button>
+              <a href="https://www.netflix.com/in/login">
+                <button class="signIn">
+                  Sign In
+                </button>
+              </a>
+              
             </div>
           </nav>
         </header>
@@ -71,6 +75,14 @@
     <section>
       <div class="tv">
         <img src="assets/img/stranger-things.png " />
+        <div class="loading">
+          <img src="assets/img/stranger-things-boxshot.png"/>
+          <div class="loadingText">
+          <p>Stranger Things</p>
+          <p class="downloading">Downloading...</p>
+        </div>
+          <img src="assets/img/download-icon.gif"/>
+        </div>
       </div>
       <div class="textContainer">
         <h2>Download your shows to watch offline</h2>
@@ -165,18 +177,13 @@
             ><p class="footerText">Only on Netflix</p></a
           >
         </div>
-        <div class="wrapper">
-          <div class="languageButton">
-            <img src="assets/img/langop.svg" />
-            <div class="langSelectWrapper">
-              <select name="languageSelect" class="languageSelect">
-                <option lang="en">English</option>
-                <option lang="hi">हिन्दी</option>
-              </select>
-            </div>
-          </div>
-        </div>
-        <p>Netflix India</p>
+        <button class="languageButton">
+          <select name="languageSelect" class="languageSelect">
+            <option lang="en">English</option>
+            <option lang="hi">हिन्दी</option>
+          </select>
+        </button>
+        <p class="footerName">Netflix India</p>
       </div>
     </footer>
   </body>
